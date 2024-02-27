@@ -1,0 +1,17 @@
+
+import hashlib
+
+def generate_secure_hash(password):
+    
+    sha_signature = hashlib.sha256(password.encode()).hexdigest()
+    return sha_signature
+
+#pragya'n's projectwork
+
+password = input("Please enter your password: ")
+
+
+hash_value = generate_secure_hash(password)
+
+
+print(f"The SHA256 hash value for '{password}' is: {hash_value}") 
